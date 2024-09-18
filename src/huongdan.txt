@@ -1,0 +1,30 @@
+Bước 1: Tải dự án HTML
+Bước 2: Tạo mới project mini-project-1
+BƯớc 3: Chuyển dữ liệu từ file HTML sang đuôi jsx
+    + Vào trang trang https://transform.tools/html-to-jsx
+    + Copy nội dung trong file html -> convert sang file jsx
+    + Copy lại nội dung trong phần jsx -> file App.js
+    + Chuyển cả các file tài nguyên img, js, css vào thư mục publiccuar dự án mini-project-1
+    + Import css, js vào trong dự án
+Bước 4: Xác định các components
+    + Tiltle  
+    + ListStudent
+        ++ Student
+    + Form
+Bước 5: Tách các thành phần giao diện
+Bước 6: Tổ chức dữ liệu trong state của app
+    * render dữ liệu trên ListStudent
+    -App: (state)
+        - render -> ListStudent -> student
+Bước 7: xử lý ẩn hiện form 
+    - App: state -> isToggle
+    *) Thêm mới: -> hiển thị form 
+        - Comp (Control) -> event(thêm mới) -> chuyển App -> set isToggle=true  
+    *) Đóng form: khi người dùng click nút submit
+        - Comp: (Form) -> event(Submit) -> App -> set isToggle=false;
+    *) Xem thông tin:-> hiển thị form 
+        - Comp: (Student) -> event(Xem) -> ListStudent -> App -> set isToggle
+    *) Sửa: hiển thị form 
+        - Comp (Student)-> event(Sửa) -> ListStudent -> App -> set isToggle
+Bước 8: Xem thông tin 
+    *) component (Student) -> event(Xem)-> data -> ListStudent -> App -> set (object student: state(student))
